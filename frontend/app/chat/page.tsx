@@ -815,7 +815,6 @@ Example of action analysis:
   <div className="flex items-center justify-between">
     <div className="flex items-center gap-2 md:gap-3">
       {/* Ikon diganti jadi gambar */}
-      <div className="bg-gradient-to-r from-[#2596be]/80 to-[#2596be] p-1.5 md:p-2 rounded-full shadow-glow-sm">
         <Image
           src="/bonx-logo.png"
           alt="Bonx"
