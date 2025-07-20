@@ -1,6 +1,5 @@
 "use client"
-import { useState } from "react"
-import { Copy } from "lucide-react"
+
 import { useState, useRef, useEffect } from "react"
 import { Input } from "@/components/ui/input"
 import {
@@ -106,14 +105,7 @@ export default function ChatPage() {
   const { publicKey, sendTransaction } = useWallet();
   const { connection } = useConnection();
   const [balance, setBalance] = useState<number | null>(null); // State to hold the balance
-  const contractAddress = "H8sCBZBNfffXT9NSvkV9FmGCLSjiamNpLg5wagT7bonk"
-  const [copied, setCopied] = useState(false)
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(contractAddress)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
   // Save messages to localStorage whenever they change
   useEffect(() => {
     if (chatMessages.length > 0) {
@@ -849,7 +841,7 @@ Example of action analysis:
 
 
 
- return (
+  return (
     <div className="relative flex flex-col h-screen overflow-hidden">
       {/* Video Background */}
       <VideoBackground />
