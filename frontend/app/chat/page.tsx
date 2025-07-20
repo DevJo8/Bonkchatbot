@@ -1087,7 +1087,7 @@ return (
             <RiTwitterXFill className="h-5 w-5" />
           </a>
           <a 
-            href="https://dexscreener.com/your_dex" 
+            href="letsbonk.fun" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
@@ -1095,7 +1095,7 @@ return (
             <ExternalLink className="h-5 w-5" />
           </a>
           <a 
-            href="https://docs.your_project.com" 
+            href="" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
