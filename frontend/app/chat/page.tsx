@@ -106,7 +106,14 @@ export default function ChatPage() {
   const { publicKey, sendTransaction } = useWallet();
   const { connection } = useConnection();
   const [balance, setBalance] = useState<number | null>(null); // State to hold the balance
+  const contractAddress = "H8sCBZBNfffXT9NSvkV9FmGCLSjiamNpLg5wagT7bonk"
+  const [copied, setCopied] = useState(false)
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(contractAddress)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
   // Save messages to localStorage whenever they change
   useEffect(() => {
     if (chatMessages.length > 0) {
@@ -851,15 +858,31 @@ Example of action analysis:
       <header className="relative z-14 border-b border-white/10 bg-black/40 backdrop-blur-xl p-2 md:p-4">
   <div className="flex items-center justify-between">
     <div className="flex items-center gap-2 md:gap-3">
-      <div className="border border-[#2596be]/40 rounded-full p-0.5">
-        <Image
-         src="/bonx-logo.png"
-         alt="Bonx"
-         width={56}
-         height={56}
-        className="rounded-full"
-      />
-    </div>
+  {/* Logo BONX */}
+  <div className="border border-[#2596be]/40 rounded-full p-0.5">
+    <Image
+      src="/bonx-logo.png"
+      alt="Bonx"
+      width={56}
+      height={56}
+      className="rounded-full"
+    />
+  </div>
+
+  {/* Contract address display + copy button */}
+  <div className="hidden md:flex items-center gap-2 bg-black/20 border border-[#2596be]/30 rounded-md px-3 py-1 text-xs text-[#2596be]">
+    <span className="truncate max-w-[200px]">{contractAddress}</span>
+    <button
+      onClick={handleCopy}
+      className="hover:text-white transition"
+      title="Copy to clipboard"
+    >
+      <Copy size={14} />
+    </button>
+    {copied && <span className="text-green-400 ml-2">Copied!</span>}
+  </div>
+</div>
+
             <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
             BONX
             </span>
