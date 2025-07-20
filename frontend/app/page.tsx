@@ -39,7 +39,7 @@ export default function Home() {
                   GAIA{" "}
                 </h1>
                 <p className="mt-4 md:mt-6 text-lg md:text-xl text-[#2596be] max-w-2xl mx-auto leading-relaxed px-4">
-                  CHAT WITH GAIA, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
+                  CHAT WITH BONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
                 </p>
 
                 {/* Enhanced CTA buttons */}
