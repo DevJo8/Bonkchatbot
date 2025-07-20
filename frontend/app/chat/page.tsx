@@ -107,7 +107,7 @@ export default function ChatPage() {
   const { connection } = useConnection();
   const [balance, setBalance] = useState<number | null>(null); // State to hold the balance
 
-const contractAddress = "SOON";
+const contractAddress = "Frbcy2koikzgF7gHyAGCth8231MJWqyeXLWsJPgibonk";
 const [copied, setCopied] = useState(false);
 const handleCopy = () => {
   navigator.clipboard.writeText(contractAddress);
@@ -175,7 +175,7 @@ new DynamicTool({
         if (!publicKey) return "No wallet connected";
 
         const tokenMintMap: Record<string, string> = {
-          "BONX": "SOON", // Ganti dengan mint aslimu nanti
+          "BONX": "Frbcy2koikzgF7gHyAGCth8231MJWqyeXLWsJPgibonk", // Ganti dengan mint aslimu nanti
           "BONK": "DezX4v3eDqNN5UP57wX6dM7kQAxvFBLu1Zxz97uhz5W",
           "WEN": "WEN2S8ysFbN3yocPvZyTuyYtGbJUzMdb3kLpmh7m6hL"
         };
