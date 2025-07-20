@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { cn } from "@/lib/utils"
 import { MessageCircle, User } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 interface ChatMessageProps {
   role: "user" | "assistant"
@@ -27,11 +28,13 @@ export default function ChatMessage({ role, content, isLast = false }: ChatMessa
       className={cn("flex gap-4 max-w-4xl mx-auto", role === "user" ? "justify-end" : "justify-start")}
     >
       {role === "assistant" && (
-        <Avatar className="h-10 w-10 rounded-full border border-white/10 shadow-glow-sm bg-gradient-to-br from-violet-600 to-blue-600">
-          <AvatarFallback className="rounded-full text-white">
-            <MessageCircle className="h-5 w-5" />
-          </AvatarFallback>
-        </Avatar>
+        <Image
+          src="/bonx-logo.png"
+          alt="BONX"
+          width={24}
+          height={24}
+          className="rounded-full"
+        />
       )}
 
       <div
