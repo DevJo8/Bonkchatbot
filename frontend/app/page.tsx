@@ -88,14 +88,6 @@ export default function Home() {
           >
             <ExternalLink className="h-5 w-5" />
           </a>
-          <a 
-            href="https://docs.your_project.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
-          >
-            <BookOpen className="h-5 w-5" />
-          </a>
         </div>
       </main>
     </div>
