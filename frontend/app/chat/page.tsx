@@ -45,6 +45,7 @@ import { clear } from "console"
 import ReactMarkdown from 'react-markdown'
 import { VideoBackground } from "@/components/ui/video-background"
 import { RiTwitterXFill } from "react-icons/ri"
+import Image from "next/image"
 
 
 interface ChatMessageType {
@@ -811,11 +812,18 @@ Example of action analysis:
       
       {/* Header */}
       <header className="relative z-10 border-b border-white/10 bg-black/40 backdrop-blur-xl p-2 md:p-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 md:gap-3">
-            <div className="bg-gradient-to-r from-[#2596be]/80 to-[#2596be] p-1.5 md:p-2 rounded-full shadow-glow-sm">
-              <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-white" />
-            </div>
+  <div className="flex items-center justify-between">
+    <div className="flex items-center gap-2 md:gap-3">
+      {/* Ikon diganti jadi gambar */}
+      <div className="bg-gradient-to-r from-[#2596be]/80 to-[#2596be] p-1.5 md:p-2 rounded-full shadow-glow-sm">
+        <Image
+          src="/bonx-logo.png"
+          alt="Bonx"
+          width={24}
+          height={24}
+          className="rounded-full"
+        />
+      </div>
             <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
             BONX
             </span>
