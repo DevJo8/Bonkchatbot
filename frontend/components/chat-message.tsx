@@ -30,7 +30,7 @@ export default function ChatMessage({ role, content, isLast = false }: ChatMessa
       {role === "assistant" && (
   <div className="w-12 h-12 flex items-center justify-center rounded-full overflow-hidden border border-[#2596be]/40">
     <Image
-      src="/bonx-logo.png"
+      src="/bgb.png"
       alt="BONX"
       width={48}
       height={48}
