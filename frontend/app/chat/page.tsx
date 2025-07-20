@@ -107,7 +107,7 @@ export default function ChatPage() {
   const { connection } = useConnection();
   const [balance, setBalance] = useState<number | null>(null); // State to hold the balance
 
-const contractAddress = "H8sCBZBNfffXT9NSvkV9FmGCLSjiamNpLg5wagT7bonk";
+const contractAddress = "SOON";
 const [copied, setCopied] = useState(false);
 const handleCopy = () => {
   navigator.clipboard.writeText(contractAddress);
