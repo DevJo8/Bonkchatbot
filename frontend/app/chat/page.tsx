@@ -868,18 +868,22 @@ Example of action analysis:
       className="rounded-full"
     />
   </div>
-  {/* Contract Address */}
-  <div className="ml-3 flex items-center bg-black/20 border border-[#2596be]/30 rounded-md px-3 py-1 text-xs text-[#2596be]">
-    <span className="truncate max-w-[180px]">{contractAddress}</span>
-    <button
-      onClick={handleCopy}
-      className="ml-2 hover:text-white transition"
-      title="Copy to clipboard"
-    >
-      <Copy size={14} />
-    </button>
-    {copied && <span className="ml-2 text-green-400">Copied!</span>}
-  </div>
+  <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
+  BONX
+</span>
+
+{/* Contract Address (copyable) */}
+<div className="hidden md:flex items-center gap-2 ml-4 px-3 py-1 text-xs rounded-md border border-[#2596be]/30 bg-black/20 text-[#2596be]">
+  <span className="truncate max-w-[200px]">{contractAddress}</span>
+  <button
+    onClick={handleCopy}
+    className="hover:text-white transition"
+    title="Copy to clipboard"
+  >
+    <Copy size={14} />
+  </button>
+  {copied && <span className="text-green-400 ml-2">Copied!</span>}
+</div>
 
   {/* Teks BONX */}
   <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
