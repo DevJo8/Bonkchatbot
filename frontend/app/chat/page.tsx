@@ -159,6 +159,42 @@ export default function ChatPage() {
         }
       },
     }),
+new DynamicTool({
+    name: "getTokenBalanceByName",
+    description: "Gets the balance of a specific SPL token in the connected wallet by token name (e.g. BONX, BONK). Input should be the token name only.",
+    func: async (input: string) => {
+      try {
+        if (!publicKey) return "No wallet connected";
+
+        const tokenMintMap: Record<string, string> = {
+          "BONX": "H8sCBZBNfffXT9NSvkV9FmGCLSjiamNpLg5wagT7bonk", // Ganti dengan mint aslimu nanti
+          "BONK": "DezX4v3eDqNN5UP57wX6dM7kQAxvFBLu1Zxz97uhz5W",
+          "WEN": "WEN2S8ysFbN3yocPvZyTuyYtGbJUzMdb3kLpmh7m6hL"
+        };
+
+        const tokenName = input.trim().toUpperCase();
+        const mint = tokenMintMap[tokenName];
+        if (!mint) return `Token "${tokenName}" is not supported yet.`;
+
+        const tokenAccounts = await connection.getParsedTokenAccountsByOwner(publicKey, {
+          programId: new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+        });
+
+        const matched = tokenAccounts.value.find(
+          (account) => account.account.data.parsed.info.mint === mint
+        );
+
+        if (!matched) {
+          return `No balance found for ${tokenName} in your wallet.`;
+        }
+
+        const amount = matched.account.data.parsed.info.tokenAmount.uiAmount;
+        return `Your ${tokenName} balance is: ${amount}`;
+      } catch (error: any) {
+        return `Error: ${error.message}`;
+      }
+    }
+  }),
     new DynamicTool({
       name: "transferSOL",
       description: "Transfers SOL to reciever's wallets. Input format: receiverPublicKey,amount",
