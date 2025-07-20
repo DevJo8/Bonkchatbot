@@ -1079,7 +1079,7 @@ return (
       {/* Social Media Icons */}
       <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 flex flex-row gap-3 md:gap-4 z-20">
           <a 
-            href="https://twitter.com/your_twitter" 
+            href="https://x.com/bonx_ai" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
