@@ -1080,15 +1080,15 @@ return (
       <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 flex flex-row gap-3 md:gap-4 z-20">
           <a 
             href="https://x.com/bonx_ai" 
-            target="_blank" 
+            target="https://x.com/bonx_ai" 
             rel="noopener noreferrer"
             className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
           >
             <RiTwitterXFill className="h-5 w-5" />
           </a>
           <a 
-            href="letsbonk.fun" 
-            target="_blank" 
+            href="https://letsbonk.fun" 
+            target="https://letsbonk.fun" 
             rel="noopener noreferrer"
             className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
           >
