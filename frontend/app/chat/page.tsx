@@ -884,12 +884,6 @@ Example of action analysis:
   </button>
   {copied && <span className="text-green-400 ml-2">Copied!</span>}
 </div>
-
-  {/* Teks BONX */}
-  <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
-    BONX
-  </span>
-</div>
           <div className="flex items-center gap-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
