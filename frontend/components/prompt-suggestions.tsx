@@ -14,6 +14,11 @@ export default function PromptSuggestions({ onSuggestionClick }: PromptSuggestio
       prompt: "Get my wallet balance",
     },
     {
+      title: "Get my BONX balance",
+      description: "Check how many BONX tokens you have in your wallet",
+      prompt: "Get my BONX balance"
+    },
+    {
       title: "Transfer SOL to another wallet",
       description: "Transfer SOL to another wallet",
       prompt: "transfer 0.1 sol to wallet id ",
