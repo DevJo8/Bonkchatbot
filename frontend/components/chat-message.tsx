@@ -28,12 +28,12 @@ export default function ChatMessage({ role, content, isLast = false }: ChatMessa
       className={cn("flex gap-4 max-w-4xl mx-auto", role === "user" ? "justify-end" : "justify-start")}
     >
       {role === "assistant" && (
-  <div className="w-8 h-8 flex items-center justify-center rounded-full overflow-hidden border border-[#2596be]/40">
+  <div className="w-12 h-12 flex items-center justify-center rounded-full overflow-hidden border border-[#2596be]/40">
     <Image
       src="/bonx-logo.png"
       alt="BONX"
-      width={32}
-      height={32}
+      width={48}
+      height={48}
     />
   </div>
 )}
