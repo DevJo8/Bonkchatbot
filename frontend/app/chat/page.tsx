@@ -884,9 +884,6 @@ Example of action analysis:
         </div>
       </div>
     </header>
-
-    {/* Sisa elemen lain setelah header boleh ditaruh di sini */}
-  </div>
 )
             <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
             BONX
