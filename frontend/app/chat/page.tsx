@@ -857,20 +857,37 @@ return (
       {/* Header */}
       <header className="relative z-14 border-b border-white/10 bg-black/40 backdrop-blur-xl p-2 md:p-4">
   <div className="flex items-center justify-between">
-    <div className="flex items-center gap-2 md:gap-3">
-      <div className="border border-[#2596be]/40 rounded-full p-0.5">
-        <Image
-         src="/bonx-logo.png"
-         alt="Bonx"
-         width={56}
-         height={56}
-        className="rounded-full"
-      />
-    </div>
-            <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
-            BONX
-            </span>
-          </div>
+    <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap md:flex-nowrap">
+
+  {/* Logo BONX */}
+  <div className="border border-[#2596be]/40 rounded-full p-0.5">
+    <Image
+      src="/bonx-logo.png"
+      alt="Bonx"
+      width={56}
+      height={56}
+      className="rounded-full"
+    />
+  </div>
+
+  {/* Teks BONX */}
+  <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
+    BONX
+  </span>
+
+  {/* Address & Copy Button */}
+  <div className="flex items-center gap-1 bg-black/20 border border-[#2596be]/30 rounded-md px-2 py-1 text-xs text-[#2596be]">
+    <span className="truncate max-w-[200px]">{contractAddress}</span>
+    <button
+      onClick={handleCopy}
+      className="hover:text-white transition"
+      title="Copy to clipboard"
+    >
+      <Copy size={14} />
+    </button>
+    {copied && <span className="text-green-400 ml-2">Copied!</span>}
+  </div>
+</div>
           <div className="flex items-center gap-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
