@@ -877,7 +877,7 @@ return (
 
   {/* Address & Copy Button */}
   <div className="flex items-center gap-1 bg-black/20 border border-[#2596be]/30 rounded-md px-2 py-1 text-xs text-[#2596be]">
-    <span className="truncate max-w-[200px]">{contractAddress}</span>
+    <span className="truncate max-w-[360px]">{contractAddress}</span>
     <button
       onClick={handleCopy}
       className="hover:text-white transition"
