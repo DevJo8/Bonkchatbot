@@ -811,15 +811,15 @@ Example of action analysis:
       <VideoBackground />
       
       {/* Header */}
-      <header className="relative z-10 border-b border-white/10 bg-black/40 backdrop-blur-xl p-2 md:p-4">
+      <header className="relative z-14 border-b border-white/10 bg-black/40 backdrop-blur-xl p-2 md:p-4">
   <div className="flex items-center justify-between">
     <div className="flex items-center gap-2 md:gap-3">
       <div className="border border-[#2596be]/40 rounded-full p-0.5">
         <Image
          src="/bonx-logo.png"
          alt="Bonx"
-         width={24}
-         height={24}
+         width={56}
+         height={56}
         className="rounded-full"
       />
     </div>
