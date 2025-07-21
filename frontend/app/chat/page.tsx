@@ -1087,8 +1087,8 @@ return (
             <RiTwitterXFill className="h-5 w-5" />
           </a>
           <a 
-            href="https://letsbonk.fun" 
-            target="https://letsbonk.fun" 
+            href="https://pump.fun" 
+            target="https://pump.fun" 
             rel="noopener noreferrer"
             className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
           >
