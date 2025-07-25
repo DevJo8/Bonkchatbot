@@ -18,7 +18,7 @@ import { useState } from "react"
 export default function Home() {
   const { connected } = useWallet()
   const router = useRouter()
-  const contractAddress = "COMING SOON";
+  const contractAddress = "aksadhgshdywfdywfdyw";
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText(contractAddress);
@@ -47,7 +47,7 @@ export default function Home() {
                   Cobonx AI{" "}
                 </h1>
                 <p className="mt-4 md:mt-6 text-lg md:text-xl text-[#ff5c01] max-w-2xl mx-auto leading-relaxed px-4">
-                  CHAT WITH COBONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
+                  CHAT WITH BONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
                 </p>
 
                 {/* Enhanced CTA buttons */}
@@ -76,8 +76,8 @@ export default function Home() {
         {/* Social Media Icons */}
         <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 flex flex-row gap-3 md:gap-4 z-20">
           <a 
-            href="https://x.com/CoBonxAI" 
-            target="https://x.com/CoBonxAI" 
+            href="https://x.com/cobonxai" 
+            target="https://x.com/cobonxai" 
             rel="noopener noreferrer"
             className="p-2 text-[#ff5c01] hover:text-white transition-all duration-300"
           >
@@ -93,11 +93,11 @@ export default function Home() {
           </a>
         </div>
       </main>
-      {/* Dog Image - fixed on the right side */}
+      {/* Dog Image - background center on mobile, fixed right on desktop */}
       <img 
         src="/dog-new.png" 
         alt="Bonx Dog" 
-        className="fixed bottom-20 right-10 w-[480px] h-auto z-10 select-none pointer-events-none" 
+        className="absolute md:fixed left-1/2 md:left-auto top-1/2 md:top-auto md:bottom-20 md:right-10 w-72 sm:w-96 md:w-[480px] h-auto z-0 md:z-10 select-none pointer-events-none transform -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 opacity-30 md:opacity-100" 
         style={{maxWidth: '480px'}}
       />
     </div>
