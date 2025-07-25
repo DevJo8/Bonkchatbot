@@ -888,7 +888,7 @@ return (
         className="bg-[#FFA500] hover:bg-[#FFB347] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 backdrop-blur-md transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
         title="Copy contract address"
       >
-        <span className="truncate max-w-[160px]">{contractAddress}</span>
+        <span>{contractAddress}</span>
         <Copy size={14} />
         {copied && <span className="text-green-200 ml-2">Copied!</span>}
       </button>
