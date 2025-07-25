@@ -9,14 +9,14 @@ interface PromptSuggestionsProps {
 export default function PromptSuggestions({ onSuggestionClick }: PromptSuggestionsProps) {
   const suggestions = [
     {
-      title: "Get my wallet balance",
+      title: "Get my SOL balance",
       description: "Get the balance of your wallet",
-      prompt: "Get my wallet balance",
+      prompt: "Get my SOL balance",
     },
     {
-      title: "Get my BONX balance",
-      description: "Check how many BONX tokens you have in your wallet",
-      prompt: "Get my BONX balance"
+      title: "Get my COBONX balance",
+      description: "Check how many CBONX tokens you have in your wallet",
+      prompt: "Get my COBONX balance"
     },
     {
       title: "Transfer SOL to another wallet",
