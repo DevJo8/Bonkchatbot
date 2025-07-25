@@ -77,8 +77,8 @@ export default function Home() {
       <img 
         src="/dog-new.png" 
         alt="Bonx Dog" 
-        className="fixed bottom-20 right-10 w-[480px] h-auto z-10 select-none pointer-events-none" 
-        style={{maxWidth: '480px'}}
+        className="fixed bottom-20 right-10 w-[600px] h-auto z-10 select-none pointer-events-none" 
+        style={{maxWidth: '600px'}}
       />
     </div>
   )
