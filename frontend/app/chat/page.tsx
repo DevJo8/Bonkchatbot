@@ -927,8 +927,8 @@ return (
                   className="relative w-24 h-24 md:w-32 md:h-32 mx-auto"
                 >
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-gradient-to-r from-[#2596be]/80 to-[#2596bf] p-4 md:p-5 rounded-full shadow-glow-lg animate-pulse-slow">
-                      <Sparkles className="h-10 w-10 md:h-14 md:w-14 text-white" />
+                    <div className="p-0 rounded-full shadow-glow-lg animate-pulse-slow overflow-hidden w-24 h-24 md:w-32 md:h-32">
+                      <Image src="/doge-logo.png" alt="Logo" width={128} height={128} className="object-contain w-full h-full" />
                     </div>
                   </div>
                 </motion.div>
