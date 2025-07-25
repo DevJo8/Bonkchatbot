@@ -864,55 +864,55 @@ return (
       
       {/* Header */}
       <header className="relative z-30 border-b border-[#282829] bg-[#282829] p-2 md:p-4">
-  <div className="flex items-center justify-between">
-    <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap md:flex-nowrap">
-      {/* Logo BONX */}
-      <div className="border border-[#ff5c01]/40 rounded-full p-0.5">
-        <Image
-          src="/bonx-logo.png"
-          alt="Bonx"
-          width={56}
-          height={56}
-          className="rounded-full"
-        />
-      </div>
-      {/* Teks BONX */}
-      <span className="text-xl md:text-2xl font-bold text-white">
-        Cobonx AI
-      </span>
-    </div>
-    <div className="flex items-center gap-2">
-      {/* Contract Address Button (moved and restyled) */}
-      <button
-        onClick={handleCopy}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
-        title="Copy contract address"
-      >
-        <span>{contractAddress}</span>
-        <Copy size={14} />
-        {copied && <span className="text-green-200 ml-2">Copied!</span>}
-      </button>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={handleClearChat}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
-      >
-        <span className="text-white">Clear Chat</span>
-      </motion.button>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={handleNewChat}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
-      >
-        <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-white" />
-        <span className="text-white">New Chat</span>
-      </motion.button>
-      <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative' }} />
-    </div>
-  </div>
-</header>
+        <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-2 sm:gap-0 w-full">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full sm:w-auto">
+            {/* Logo BONX */}
+            <div className="border border-[#ff5c01]/40 rounded-full p-0.5 mb-1 sm:mb-0">
+              <Image
+                src="/bonx-logo.png"
+                alt="Bonx"
+                width={48}
+                height={48}
+                className="rounded-full"
+              />
+            </div>
+            {/* Teks BONX */}
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center">Cobonx AI</span>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
+            {/* Contract Address Button */}
+            <button
+              onClick={handleCopy}
+              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-full sm:w-auto"
+              title="Copy contract address"
+            >
+              <span className="truncate max-w-[140px] sm:max-w-none">{contractAddress}</span>
+              <Copy size={14} />
+              {copied && <span className="text-green-200 ml-2">Copied!</span>}
+            </button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleClearChat}
+              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-full sm:w-auto"
+            >
+              <span className="text-white">Clear Chat</span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleNewChat}
+              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-full sm:w-auto"
+            >
+              <PlusCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
+              <span className="text-white">New Chat</span>
+            </motion.button>
+            <div className="w-full sm:w-auto flex justify-center">
+              <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative', width: '100%' }} />
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Main content */}
       <div className="relative flex-1 overflow-auto p-2 md:p-4 scrollbar-thin scrollbar-thumb-indigo-600/30 scrollbar-track-transparent bg-[#121212]">
