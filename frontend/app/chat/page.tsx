@@ -850,17 +850,17 @@ Example of action analysis:
 
 
 return (
-    <div className="relative flex flex-col h-screen overflow-hidden">
+    <div className="relative flex flex-col h-screen overflow-hidden bg-gradient-to-br from-[#FFA500] via-[#FFB347] to-[#FF8800]">
       {/* Video Background */}
-      <VideoBackground />
+      {/* <VideoBackground /> */}
       
       {/* Header */}
-      <header className="relative z-14 border-b border-white/10 bg-black/40 backdrop-blur-xl p-2 md:p-4">
+      <header className="relative z-14 border-b border-white/10 bg-[#FFA500]/60 backdrop-blur-xl p-2 md:p-4">
   <div className="flex items-center justify-between">
     <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap md:flex-nowrap">
 
   {/* Logo BONX */}
-  <div className="border border-[#2596be]/40 rounded-full p-0.5">
+  <div className="border border-[#FFA500]/40 rounded-full p-0.5">
     <Image
       src="/bonx-logo.png"
       alt="Bonx"
@@ -871,12 +871,12 @@ return (
   </div>
 
   {/* Teks BONX */}
-  <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2596be]/90 to-[#2596be]">
+  <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFA500]/90 to-[#FF8800]">
     BONX
   </span>
 
   {/* Address & Copy Button */}
-  <div className="flex items-center gap-1 bg-black/20 border border-[#2596be]/30 rounded-md px-2 py-1 text-xs text-[#2596be]">
+  <div className="flex items-center gap-1 bg-[#FFA500]/20 border border-[#FFA500]/30 rounded-md px-2 py-1 text-xs text-[#FFA500]">
     <span className="truncate max-w-[360px]">{contractAddress}</span>
     <button
       onClick={handleCopy}
@@ -893,26 +893,26 @@ return (
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleClearChat}
-              className="bg-black/30 hover:bg-black/40 text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 backdrop-blur-md transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
+              className="bg-[#FFA500]/30 hover:bg-[#FFA500]/40 text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 backdrop-blur-md transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
             >
-              <span className="text-indigo-100">Clear Chat</span>
+              <span className="text-white">Clear Chat</span>
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleNewChat}
-              className="bg-black/30 hover:bg-black/40 text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 backdrop-blur-md transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
+              className="bg-[#FFA500]/30 hover:bg-[#FFA500]/40 text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 backdrop-blur-md transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
             >
-              <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-indigo-300" />
-              <span className="text-indigo-100">New Chat</span>
+              <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-white" />
+              <span className="text-white">New Chat</span>
             </motion.button>
-            <WalletMultiButton style={{ background: 'linear-gradient(to right, #2596be, #2596be)' }} />
+            <WalletMultiButton style={{ background: 'linear-gradient(to right, #FFA500, #FF8800)' }} />
           </div>
         </div>
       </header>
 
       {/* Main content */}
-      <div className="relative flex-1 overflow-auto p-2 md:p-4 scrollbar-thin scrollbar-thumb-indigo-600/30 scrollbar-track-transparent">
+      <div className="relative flex-1 overflow-auto p-2 md:p-4 scrollbar-thin scrollbar-thumb-indigo-600/30 scrollbar-track-transparent bg-gradient-to-br from-[#FFA500] via-[#FFB347] to-[#FF8800]">
         <div className="flex-1 overflow-y-auto space-y-4 md:space-y-6 mb-4 px-1 md:px-2 max-w-4xl mx-auto">
           {chatMessages.length === 0 ? (
             <div className="space-y-6 md:space-y-10 py-6 md:py-10">
@@ -1016,8 +1016,8 @@ return (
             transition={{ duration: 0.5 }}
             className={cn("relative transition-all duration-500", isFocused ? "scale-[1.02]" : "")}
           >
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-violet-500/20 to-blue-500/20 blur-md"></div>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-xl shadow-glow-sm">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FFA500]/20 to-[#FF8800]/20 blur-md"></div>
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#FFA500]/20 backdrop-blur-xl shadow-glow-sm">
               <div
                 className={cn(
                   "absolute inset-0 opacity-0 transition-opacity duration-500",
@@ -1054,7 +1054,7 @@ return (
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     type="submit"
-                    className="bg-gradient-to-r from-[#2596be] to-[#1a7a9e] text-white rounded-full h-8 w-8 md:h-10 md:w-10 flex items-center justify-center shadow-glow-sm transition-all duration-300"
+                    className="bg-gradient-to-r from-[#FFA500] to-[#FF8800] text-white rounded-full h-8 w-8 md:h-10 md:w-10 flex items-center justify-center shadow-glow-sm transition-all duration-300"
                   >
                     <Send className="h-4 w-4 md:h-5 md:w-5" />
                   </motion.button>
@@ -1071,7 +1071,7 @@ return (
           initial={{ y: 50, x:50, opacity: 0 }}
           animate={{ y: 0,x:0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-black/30 backdrop-blur-xl border border-white/10 rounded-full p-1.5 md:p-2 shadow-glow-sm"
+          className="bg-[#FFA500]/30 backdrop-blur-xl border border-white/10 rounded-full p-1.5 md:p-2 shadow-glow-sm"
         >
           <AnimatedTooltip items={navigationItems} className="flex flex-row justify-center items-center"/>
         </motion.div>
@@ -1082,7 +1082,7 @@ return (
             href="https://x.com/bonx_ai" 
             target="https://x.com/bonx_ai" 
             rel="noopener noreferrer"
-            className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
+            className="p-2 text-[#FFA500] hover:text-white transition-all duration-300"
           >
             <RiTwitterXFill className="h-5 w-5" />
           </a>
@@ -1090,7 +1090,7 @@ return (
             href="https://pump.fun" 
             target="https://pump.fun" 
             rel="noopener noreferrer"
-            className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
+            className="p-2 text-[#FFA500] hover:text-white transition-all duration-300"
           >
             <ExternalLink className="h-5 w-5" />
           </a>
