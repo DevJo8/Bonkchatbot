@@ -864,6 +864,10 @@ return (
       
       {/* Header */}
       <header className="relative z-30 border-b border-[#282829] bg-[#282829] p-2 md:p-4">
+  {/* Wallet button di pojok kanan atas */}
+  <div className="absolute top-2 right-2 md:static md:top-auto md:right-auto md:ml-auto">
+    <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative' }} />
+  </div>
   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-0">
     {/* Kiri: Logo + Nama */}
     <div className="flex items-center justify-center gap-3 md:gap-4">
@@ -882,7 +886,7 @@ return (
         Cobonx AI
       </span>
     </div>
-    {/* Tengah & Kanan: Wallet + Tombol */}
+    {/* Tengah & Kanan: Wallet Address + Tombol */}
     <div className="flex flex-col sm:flex-row items-center gap-2 w-full md:w-auto">
       <button
         onClick={handleCopy}
@@ -910,9 +914,6 @@ return (
         <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-white" />
         <span className="text-white">New Chat</span>
       </motion.button>
-      <div className="w-full sm:w-auto">
-        <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative', width: '100%' }} />
-      </div>
     </div>
   </div>
 </header>
