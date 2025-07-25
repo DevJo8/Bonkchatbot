@@ -18,7 +18,7 @@ import { useState } from "react"
 export default function Home() {
   const { connected } = useWallet()
   const router = useRouter()
-  const contractAddress = "aksadhgshdywfdywfdyw";
+  const contractAddress = "COMING SOON";
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText(contractAddress);
