@@ -970,7 +970,7 @@ return (
                     {message.actionAnalysis && (
                       <div className="mt-1 md:mt-2">
                         <button
-                          className="text-blue-500 text-sm md:text-base"
+                          className="text-orange-400 text-sm md:text-base"
                           onClick={() => {
                             const actionAnalysisElement = document.getElementById(`action-analysis-${message.id}`);
                             if (actionAnalysisElement) {
