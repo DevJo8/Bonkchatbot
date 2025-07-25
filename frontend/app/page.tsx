@@ -11,12 +11,20 @@ import { useWallet } from "@solana/wallet-adapter-react"
 import { useRouter } from "next/navigation"
 import { VideoBackground } from "@/components/ui/video-background"
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui"
-import { Twitter, BookOpen, ExternalLink } from "lucide-react"
+import { Twitter, BookOpen, ExternalLink, Copy } from "lucide-react"
 import { RiTwitterXFill } from "react-icons/ri";
+import { useState } from "react"
 
 export default function Home() {
   const { connected } = useWallet()
   const router = useRouter()
+  const contractAddress = "aksadhgshdywfdywfdyw";
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(contractAddress);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   if(connected){
     router.push("/chat")
   }
@@ -48,6 +56,18 @@ export default function Home() {
                     <WalletMultiButton style={{ backgroundColor: '#282829', color: '#ff5c01', border: '1px solid #ff5c01', borderRadius: '0.5rem' }} />
                   </div>
                 </div>
+                {/* Contract Address Button */}
+                <div className="flex justify-center mt-6">
+                  <button
+                    onClick={handleCopy}
+                    className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
+                    title="Copy contract address"
+                  >
+                    <span>{contractAddress}</span>
+                    <Copy size={14} />
+                    {copied && <span className="text-green-200 ml-2">Copied!</span>}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -56,8 +76,8 @@ export default function Home() {
         {/* Social Media Icons */}
         <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 flex flex-row gap-3 md:gap-4 z-20">
           <a 
-            href="https://x.com/CoBonxAI" 
-            target="https://x.com/CoBonxAI" 
+            href="https://x.com/bonx_ai" 
+            target="https://x.com/bonx_ai" 
             rel="noopener noreferrer"
             className="p-2 text-[#ff5c01] hover:text-white transition-all duration-300"
           >
@@ -77,8 +97,8 @@ export default function Home() {
       <img 
         src="/dog-new.png" 
         alt="Bonx Dog" 
-        className="fixed bottom-20 right-10 w-[600px] h-auto z-10 select-none pointer-events-none" 
-        style={{maxWidth: '600px'}}
+        className="fixed bottom-20 right-10 w-[480px] h-auto z-10 select-none pointer-events-none" 
+        style={{maxWidth: '480px'}}
       />
     </div>
   )
