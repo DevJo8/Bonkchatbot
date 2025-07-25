@@ -871,8 +871,8 @@ return (
   </div>
 
   {/* Teks BONX */}
-  <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFA500]/90 to-[#FF8800]">
-    BONX
+  <span className="text-xl md:text-2xl font-bold text-white">
+    Cobonx AI
   </span>
 
   {/* Address & Copy Button */}
