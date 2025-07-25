@@ -76,8 +76,8 @@ export default function Home() {
         {/* Social Media Icons */}
         <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 flex flex-row gap-3 md:gap-4 z-20">
           <a 
-            href="https://x.com/bonx_ai" 
-            target="https://x.com/bonx_ai" 
+            href="https://x.com/CoBonxAI" 
+            target="https://x.com/CoBonxAI" 
             rel="noopener noreferrer"
             className="p-2 text-[#ff5c01] hover:text-white transition-all duration-300"
           >
