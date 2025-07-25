@@ -107,7 +107,7 @@ export default function ChatPage() {
   const { connection } = useConnection();
   const [balance, setBalance] = useState<number | null>(null); // State to hold the balance
 
-const contractAddress = "COMING SOON";
+const contractAddress = "aksadhgshdywfdywfdyw";
 const [copied, setCopied] = useState(false);
 const [copiedWallet, setCopiedWallet] = useState(false); // For wallet address copy
 const handleCopy = () => {
@@ -864,8 +864,9 @@ return (
       
       {/* Header */}
       <header className="relative z-30 border-b border-[#282829] bg-[#282829] p-2 md:p-4">
-  <div className="flex items-center justify-between">
-    <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap md:flex-nowrap">
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-0">
+    {/* Kiri: Logo + Nama */}
+    <div className="flex items-center justify-center gap-3 md:gap-4">
       {/* Logo BONX */}
       <div className="border border-[#ff5c01]/40 rounded-full p-0.5">
         <Image
@@ -881,14 +882,14 @@ return (
         Cobonx AI
       </span>
     </div>
-    <div className="flex items-center gap-2">
-      {/* Contract Address Button (moved and restyled) */}
+    {/* Tengah & Kanan: Wallet + Tombol */}
+    <div className="flex flex-col sm:flex-row items-center gap-2 w-full md:w-auto">
       <button
         onClick={handleCopy}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
+        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap"
         title="Copy contract address"
       >
-        <span>{contractAddress}</span>
+        <span className="truncate">{contractAddress}</span>
         <Copy size={14} />
         {copied && <span className="text-green-200 ml-2">Copied!</span>}
       </button>
@@ -896,7 +897,7 @@ return (
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
         onClick={handleClearChat}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
+        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base w-full sm:w-auto"
       >
         <span className="text-white">Clear Chat</span>
       </motion.button>
@@ -904,12 +905,14 @@ return (
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
         onClick={handleNewChat}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base"
+        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base w-full sm:w-auto"
       >
         <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-white" />
         <span className="text-white">New Chat</span>
       </motion.button>
-      <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative' }} />
+      <div className="w-full sm:w-auto">
+        <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative', width: '100%' }} />
+      </div>
     </div>
   </div>
 </header>
@@ -1082,8 +1085,8 @@ return (
       {/* Social Media Icons */}
       <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 flex flex-row gap-3 md:gap-4 z-20">
           <a 
-            href="https://x.com/CoBonxAI" 
-            target="https://x.com/CoBonxAI" 
+            href="https://x.com/bonx_ai" 
+            target="https://x.com/bonx_ai" 
             rel="noopener noreferrer"
             className="p-2 text-[#FFA500] hover:text-white transition-all duration-300"
           >
