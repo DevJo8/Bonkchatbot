@@ -18,7 +18,7 @@ import { useState } from "react"
 export default function Home() {
   const { connected } = useWallet()
   const router = useRouter()
-  const contractAddress = "aksadhgshdywfdywfdyw";
+  const contractAddress = "COMING SOON";
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText(contractAddress);
@@ -47,7 +47,7 @@ export default function Home() {
                   Cobonx AI{" "}
                 </h1>
                 <p className="mt-4 md:mt-6 text-lg md:text-xl text-[#ff5c01] max-w-2xl mx-auto leading-relaxed px-4">
-                  CHAT WITH BONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
+                  CHAT WITH COBONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
                 </p>
 
                 {/* Enhanced CTA buttons */}
@@ -97,8 +97,7 @@ export default function Home() {
       <img 
         src="/dog-new.png" 
         alt="Bonx Dog" 
-        className="absolute md:fixed left-1/2 md:left-auto top-1/2 md:top-auto md:bottom-20 md:right-10 w-72 sm:w-96 md:w-[480px] h-auto z-0 md:z-10 select-none pointer-events-none transform -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 opacity-30 md:opacity-100" 
-        style={{maxWidth: '480px'}}
+        className="absolute md:fixed left-1/2 md:left-auto top-1/2 md:top-auto md:bottom-20 md:right-10 w-[576px] sm:w-[768px] md:w-[480px] h-auto z-0 md:z-10 select-none pointer-events-none transform -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 opacity-30 md:opacity-100" 
       />
     </div>
   )
