@@ -1017,7 +1017,7 @@ return (
             className={cn("relative transition-all duration-500", isFocused ? "scale-[1.02]" : "")}
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FFA500]/20 to-[#FF8800]/20 blur-md"></div>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#FFA500]/20 backdrop-blur-xl shadow-glow-sm">
+            <div className="relative overflow-hidden rounded-2xl border border-[#FFA500]/20 bg-black/60 backdrop-blur-xl shadow-glow-sm">
               <div
                 className={cn(
                   "absolute inset-0 opacity-0 transition-opacity duration-500",
@@ -1071,7 +1071,7 @@ return (
           initial={{ y: 50, x:50, opacity: 0 }}
           animate={{ y: 0,x:0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-[#FFA500]/30 backdrop-blur-xl border border-white/10 rounded-full p-1.5 md:p-2 shadow-glow-sm"
+          className="bg-black/60 backdrop-blur-xl border border-[#FFA500]/20 rounded-full p-1.5 md:p-2 shadow-glow-sm"
         >
           <AnimatedTooltip items={navigationItems} className="flex flex-row justify-center items-center"/>
         </motion.div>
