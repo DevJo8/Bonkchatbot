@@ -42,21 +42,21 @@ export default function ChatMessage({ role, content, isLast = false }: ChatMessa
         className={cn(
           "relative p-5 rounded-2xl backdrop-blur-md max-w-[80%] shadow-glow-sm",
           role === "user"
-            ? "bg-gradient-to-r from-blue-600/20 to-blue-600/10 border border-blue-500/20 rounded-tr-sm"
-            : "bg-black/20 border border-white/10 rounded-tl-sm",
+            ? "bg-gradient-to-r from-orange-400/20 to-orange-500/10 border border-orange-400/30 rounded-tr-sm shadow-[0_4px_32px_0_rgba(255,165,0,0.25)]"
+            : "bg-black/20 border border-white/10 rounded-tl-sm shadow-[0_4px_32px_0_rgba(255,165,0,0.15)]",
         )}
       >
         <div
           className={cn(
             "absolute inset-0 rounded-2xl opacity-10",
             role === "user"
-              ? "bg-gradient-to-r from-blue-600/30 to-indigo-600/20"
-              : "bg-gradient-to-r from-violet-600/20 to-indigo-600/10",
+              ? "bg-gradient-to-r from-orange-400/30 to-orange-500/20"
+              : "bg-gradient-to-r from-orange-300/10 to-orange-400/10",
           )}
         />
 
         <div className="relative z-10">
-          <div className={cn("font-medium mb-1 text-sm", role === "assistant" ? "text-violet-200" : "text-blue-200")}>
+          <div className={cn("font-medium mb-1 text-sm", role === "assistant" ? "text-violet-200" : "text-orange-300")}>
             {role === "assistant" ? "BONX" : "You"}
           </div>
           <div className="prose prose-invert max-w-none text-white/90 leading-relaxed">
@@ -66,7 +66,7 @@ export default function ChatMessage({ role, content, isLast = false }: ChatMessa
       </div>
 
       {role === "user" && (
-        <Avatar className="h-10 w-10 rounded-full border border-white/10 shadow-glow-sm bg-gradient-to-br from-blue-600 to-indigo-600">
+        <Avatar className="h-10 w-10 rounded-full border border-white/10 shadow-glow-sm bg-gradient-to-br from-orange-400 to-orange-500">
           <AvatarFallback className="rounded-full text-white">
             <User className="h-5 w-5" />
           </AvatarFallback>
