@@ -81,7 +81,7 @@ const LoadingText = () => {
   }, []);
 
   return (
-    <span className="text-indigo-400 text-sm animate-fade-in-out">
+    <span className="text-white text-sm animate-fade-in-out">
       {keywords[currentIndex]}
     </span>
   );
