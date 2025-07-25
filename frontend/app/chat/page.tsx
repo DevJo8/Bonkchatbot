@@ -930,7 +930,7 @@ return (
             <span className="text-xl md:text-2xl font-bold text-white whitespace-nowrap">Cobonx AI</span>
           </div>
 
-          {/* Center: Contract Address, Clear Chat, New Chat */}
+          {/* Right side: Contract Address, Clear Chat, New Chat, and Wallet */}
           <div className="flex items-center gap-3">
             <button
               onClick={handleCopy}
@@ -958,10 +958,6 @@ return (
               <PlusCircle className="h-4 w-4 text-white" />
               <span className="text-white">New Chat</span>
             </motion.button>
-          </div>
-
-          {/* Right side: Wallet */}
-          <div className="flex items-center">
             <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative', height: '36px', minWidth: '100px' }} />
           </div>
         </div>
