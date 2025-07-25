@@ -107,12 +107,20 @@ export default function ChatPage() {
   const { connection } = useConnection();
   const [balance, setBalance] = useState<number | null>(null); // State to hold the balance
 
-const contractAddress = "DzC6CmTUQxsBwnzm4j7iM3QxeiGGcQZQUMK1NtK34qy3";
+const contractAddress = "aksadhgshdywfdywfdyw";
 const [copied, setCopied] = useState(false);
+const [copiedWallet, setCopiedWallet] = useState(false); // For wallet address copy
 const handleCopy = () => {
   navigator.clipboard.writeText(contractAddress);
   setCopied(true);
   setTimeout(() => setCopied(false), 2000);
+};
+const handleCopyWallet = () => {
+  if (publicKey) {
+    navigator.clipboard.writeText(publicKey.toBase58());
+    setCopiedWallet(true);
+    setTimeout(() => setCopiedWallet(false), 2000);
+  }
 };
   // Save messages to localStorage whenever they change
   useEffect(() => {
@@ -886,6 +894,22 @@ return (
       <Copy size={14} />
     </button>
     {copied && <span className="text-green-400 ml-2">Copied!</span>}
+  </div>
+
+  {/* Wallet Address & Copy Button */}
+  <div className="flex items-center gap-1 bg-[#FFA500]/20 border border-[#FFA500]/30 rounded-md px-2 py-1 text-xs text-[#FFA500] relative z-40">
+    <span className="truncate max-w-[120px]">
+      {publicKey ? `${publicKey.toBase58().slice(0, 4)}..${publicKey.toBase58().slice(-4)}` : 'Not connected'}
+    </span>
+    <button
+      onClick={handleCopyWallet}
+      className="hover:text-white transition"
+      title="Copy wallet address"
+      disabled={!publicKey}
+    >
+      <Copy size={14} />
+    </button>
+    {copiedWallet && <span className="text-green-400 ml-2">Copied!</span>}
   </div>
 </div>
           <div className="flex items-center gap-2">
