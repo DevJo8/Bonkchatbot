@@ -39,7 +39,7 @@ export default function Home() {
                   Cobonx AI{" "}
                 </h1>
                 <p className="mt-4 md:mt-6 text-lg md:text-xl text-[#ff5c01] max-w-2xl mx-auto leading-relaxed px-4">
-                  CHAT WITH COBONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
+                  CHAT WITH BONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
                 </p>
 
                 {/* Enhanced CTA buttons */}
@@ -75,11 +75,12 @@ export default function Home() {
       </main>
       {/* Dog Image - fixed on the right side */}
       <img 
-        src="/dog.png" 
+        src="/dog-new.png" 
         alt="Bonx Dog" 
-        className="fixed bottom-20 right-10 w-64 h-auto z-10 select-none pointer-events-none" 
-        style={{maxWidth: '320px'}}
+        className="fixed bottom-20 right-10 w-[480px] h-auto z-10 select-none pointer-events-none" 
+        style={{maxWidth: '480px'}}
       />
     </div>
   )
 }
+
