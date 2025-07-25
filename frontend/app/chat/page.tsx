@@ -906,7 +906,7 @@ return (
               <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-white" />
               <span className="text-white">New Chat</span>
             </motion.button>
-            <WalletMultiButton style={{ background: 'linear-gradient(to right, #FFA500, #FF8800)' }} />
+            <WalletMultiButton style={{ background: 'linear-gradient(to right, #FFA500, #FF8800)', zIndex: 50, position: 'relative' }} />
           </div>
         </div>
       </header>
