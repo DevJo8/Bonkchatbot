@@ -47,7 +47,7 @@ export default function Home() {
                   Cobonx AI{" "}
                 </h1>
                 <p className="mt-4 md:mt-6 text-lg md:text-xl text-[#ff5c01] max-w-2xl mx-auto leading-relaxed px-4">
-                  CHAT WITH BONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
+                  CHAT WITH COBONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
                 </p>
 
                 {/* Enhanced CTA buttons */}
