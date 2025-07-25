@@ -884,11 +884,11 @@ return (
   </span>
 
   {/* Address & Copy Button */}
-  <div className="flex items-center gap-1 bg-[#FFA500]/20 border border-[#FFA500]/30 rounded-md px-2 py-1 text-xs text-[#FFA500] relative z-40">
+  <div className="flex items-center gap-1 bg-white/80 border border-[#FFA500]/50 rounded-md px-2 py-1 text-xs text-white shadow-md relative z-40">
     <span className="truncate max-w-[360px]">{contractAddress}</span>
     <button
       onClick={handleCopy}
-      className="hover:text-white transition"
+      className="hover:text-[#FFA500] transition"
       title="Copy to clipboard"
     >
       <Copy size={14} />
@@ -897,13 +897,13 @@ return (
   </div>
 
   {/* Wallet Address & Copy Button */}
-  <div className="flex items-center gap-1 bg-[#FFA500]/20 border border-[#FFA500]/30 rounded-md px-2 py-1 text-xs text-[#FFA500] relative z-40">
+  <div className="flex items-center gap-1 bg-white/80 border border-[#FFA500]/50 rounded-md px-2 py-1 text-xs text-white shadow-md relative z-40">
     <span className="truncate max-w-[120px]">
       {publicKey ? `${publicKey.toBase58().slice(0, 4)}..${publicKey.toBase58().slice(-4)}` : 'Not connected'}
     </span>
     <button
       onClick={handleCopyWallet}
-      className="hover:text-white transition"
+      className="hover:text-[#FFA500] transition"
       title="Copy wallet address"
       disabled={!publicKey}
     >
