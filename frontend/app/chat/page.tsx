@@ -850,7 +850,7 @@ Example of action analysis:
 
 
 return (
-    <div className="relative flex flex-col h-screen overflow-hidden bg-gradient-to-br from-[#FFA500] via-[#FFB347] to-[#FF8800]">
+    <div className="relative flex flex-col h-screen overflow-visible bg-gradient-to-br from-[#FFA500] via-[#FFB347] to-[#FF8800]">
       {/* Video Background */}
       {/* <VideoBackground /> */}
       
