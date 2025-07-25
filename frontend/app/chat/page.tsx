@@ -936,7 +936,7 @@ return (
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-2xl md:text-4xl font-bold mt-4 md:mt-6 text-transparent bg-clip-text bg-gradient-to-r from-violet-200 via-indigo-200 to-blue-200"
+                  className="text-2xl md:text-4xl font-bold mt-4 md:mt-6 text-white"
                 >
                   How can I assist you today?
                 </motion.h2>
@@ -944,7 +944,7 @@ return (
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
-                  className="text-indigo-200/80 mt-2 md:mt-3 max-w-md mx-auto text-sm md:text-base"
+                  className="text-white/80 mt-2 md:mt-3 max-w-md mx-auto text-sm md:text-base"
                 >
                   Ask me anything or select a suggestion below
                 </motion.p>
