@@ -548,11 +548,11 @@ The following tools could have been used in the logs.
 2.	transferSOL
 •	Transfers SOL to reciever's wallets.
 3.	getTransactionCost
-• Estimates the transaction cost for a SOL transfer.
+•	Estimates the transaction cost for a SOL transfer.
 4. getAccountInfo
-• Gets detailed account information for a wallet.
+•	Gets detailed account information for a wallet.
 5. getFinancialAdvice
-• Provides financial advice about a crypto coin based on the user's query.
+•	Provides financial advice about a crypto coin based on the user's query.
 
 
 📌 User Query:
@@ -864,57 +864,56 @@ return (
       
       {/* Header */}
       <header className="relative z-30 border-b border-[#282829] bg-[#282829] p-2 md:p-4">
-  {/* Wallet button di pojok kanan atas */}
-  <div className="absolute top-2 right-2 md:static md:top-auto md:right-auto md:ml-auto">
-    <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative' }} />
-  </div>
   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-0">
-    {/* Kiri: Logo + Nama */}
-    <div className="flex items-center justify-center gap-3 md:gap-4">
+    {/* Kiri: Kosong atau bisa tambahkan elemen lain */}
+    <div className="flex-1"></div>
+    {/* Kanan: Logo + Tulisan + Wallet */}
+    <div className="flex items-center justify-end gap-2">
       {/* Logo BONX */}
       <div className="border border-[#ff5c01]/40 rounded-full p-0.5">
         <Image
           src="/bonx-logo.png"
           alt="Bonx"
-          width={56}
-          height={56}
+          width={40}
+          height={40}
           className="rounded-full"
         />
       </div>
       {/* Teks BONX */}
-      <span className="text-xl md:text-2xl font-bold text-white">
+      <span className="text-lg md:text-2xl font-bold text-white">
         Cobonx AI
       </span>
+      <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative' }} />
     </div>
-    {/* Tengah & Kanan: Wallet Address + Tombol */}
-    <div className="flex flex-col sm:flex-row items-center gap-2 w-full md:w-auto">
-      <button
-        onClick={handleCopy}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap"
-        title="Copy contract address"
-      >
-        <span className="truncate">{contractAddress}</span>
-        <Copy size={14} />
-        {copied && <span className="text-green-200 ml-2">Copied!</span>}
-      </button>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={handleClearChat}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base w-full sm:w-auto"
-      >
-        <span className="text-white">Clear Chat</span>
-      </motion.button>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={handleNewChat}
-        className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base w-full sm:w-auto"
-      >
-        <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-white" />
-        <span className="text-white">New Chat</span>
-      </motion.button>
-    </div>
+  </div>
+  {/* Baris kedua: Wallet address dan tombol-tombol */}
+  <div className="flex flex-col sm:flex-row items-center gap-2 mt-2 w-full md:w-auto">
+    <button
+      onClick={handleCopy}
+      className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap"
+      title="Copy contract address"
+    >
+      <span className="truncate">{contractAddress}</span>
+      <Copy size={14} />
+      {copied && <span className="text-green-200 ml-2">Copied!</span>}
+    </button>
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.98 }}
+      onClick={handleClearChat}
+      className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base w-full sm:w-auto"
+    >
+      <span className="text-white">Clear Chat</span>
+    </motion.button>
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.98 }}
+      onClick={handleNewChat}
+      className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 md:py-2 px-3 md:px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center gap-1.5 md:gap-2 shadow-glow-sm text-sm md:text-base w-full sm:w-auto"
+    >
+      <PlusCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-white" />
+      <span className="text-white">New Chat</span>
+    </motion.button>
   </div>
 </header>
 
