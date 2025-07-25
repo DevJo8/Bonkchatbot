@@ -66,11 +66,11 @@ export default function PromptSuggestions({ onSuggestionClick }: PromptSuggestio
           className="cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-xl p-6 transition-all duration-300"
         >
           <div className="relative z-10">
-            <h3 className="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-violet-200 to-blue-200">
+            <h3 className="text-xl font-bold mb-2 text-white">
               {suggestion.title}
             </h3>
-            <p className="text-indigo-200/70 mb-4 text-sm">{suggestion.description}</p>
-            <div className="text-xs font-medium text-indigo-300 flex items-center">
+            <p className="text-white/80 mb-4 text-sm">{suggestion.description}</p>
+            <div className="text-xs font-medium text-white flex items-center">
               <span className="mr-2">Try it</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
