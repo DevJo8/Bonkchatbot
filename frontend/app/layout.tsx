@@ -9,8 +9,8 @@ import { ClientWalletProvider } from "@/components/wallet-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Bonx AI - Your AI Assistant",
-  description: "Chat with BONX to discover insights and get assistance",
+  title: "Cobonx AI - Your AI Assistant",
+  description: "Chat with COBONX to discover insights and get assistance",
   generator: 'v0.dev'
 }
 
