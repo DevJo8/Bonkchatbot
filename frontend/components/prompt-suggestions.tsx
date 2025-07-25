@@ -9,14 +9,14 @@ interface PromptSuggestionsProps {
 export default function PromptSuggestions({ onSuggestionClick }: PromptSuggestionsProps) {
   const suggestions = [
     {
-      title: "Get my SOL balance",
+      title: "Get my wallet balance",
       description: "Get the balance of your wallet",
-      prompt: "Get my SOL balance",
+      prompt: "Get my wallet balance",
     },
     {
-      title: "Get my COBONX balance",
-      description: "Check how many COBONX tokens you have in your wallet",
-      prompt: "Get my COBONX balance"
+      title: "Get my BONX balance",
+      description: "Check how many BONX tokens you have in your wallet",
+      prompt: "Get my BONX balance"
     },
     {
       title: "Transfer SOL to another wallet",
@@ -60,7 +60,7 @@ export default function PromptSuggestions({ onSuggestionClick }: PromptSuggestio
           whileHover={{
             scale: 1.03,
             y: -5,
-            boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)",
+            boxShadow: "0 0 20px rgba(255, 165, 0, 0.28)",
           }}
           onClick={() => onSuggestionClick(suggestion.prompt)}
           className="cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-xl p-6 transition-all duration-300"
@@ -90,7 +90,7 @@ export default function PromptSuggestions({ onSuggestionClick }: PromptSuggestio
               </svg>
             </div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-600/5 to-blue-600/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-400/10 to-orange-500/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </motion.div>
       ))}
     </motion.div>
