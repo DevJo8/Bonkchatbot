@@ -930,8 +930,17 @@ return (
             <span className="text-xl md:text-2xl font-bold text-white whitespace-nowrap">Cobonx AI</span>
           </div>
 
-          {/* Center: Clear Chat, New Chat, Contract Address */}
+          {/* Center: Contract Address, Clear Chat, New Chat */}
           <div className="flex items-center gap-3">
+            <button
+              onClick={handleCopy}
+              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-sm truncate"
+              title="Copy contract address"
+            >
+              <span className="truncate">{contractAddress}</span>
+              <Copy size={14} />
+              {copied && <span className="text-green-200 ml-2">Copied!</span>}
+            </button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
@@ -949,15 +958,6 @@ return (
               <PlusCircle className="h-4 w-4 text-white" />
               <span className="text-white">New Chat</span>
             </motion.button>
-            <button
-              onClick={handleCopy}
-              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1.5 px-4 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-sm truncate"
-              title="Copy contract address"
-            >
-              <span className="truncate">{contractAddress}</span>
-              <Copy size={14} />
-              {copied && <span className="text-green-200 ml-2">Copied!</span>}
-            </button>
           </div>
 
           {/* Right side: Wallet */}
