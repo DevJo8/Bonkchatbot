@@ -21,7 +21,7 @@ export default function Home() {
     router.push("/chat")
   }
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden bg-[#121212]">
       {/* Video Background */}
       <VideoBackground />
       
@@ -35,34 +35,17 @@ export default function Home() {
             {/* Left container */}
             <div className="w-full md:w-1/2 ml-0">
               <div className="text-center">
-                <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight mb-4 md:mb-8 text-[#2596be]">
-                  COBONX AI{" "}
+                <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight mb-4 md:mb-8 text-white">
+                  Cobonx AI{" "}
                 </h1>
-                <p className="mt-4 md:mt-6 text-lg md:text-xl text-[#2596be] max-w-2xl mx-auto leading-relaxed px-4">
-                  CHAT WITH COBONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
+                <p className="mt-4 md:mt-6 text-lg md:text-xl text-[#ff5c01] max-w-2xl mx-auto leading-relaxed px-4">
+                  CHAT WITH BONX, YOUR INTELLIGENT ASSISTANT FOR REAL-TIME INSHIGHTS, STRATEGY, AND AUTOMATION
                 </p>
 
                 {/* Enhanced CTA buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12 justify-center">
-                  {/* <Button
-                    size="lg"
-                    className="relative bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white border-0 px-8 py-6 text-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_8px_rgba(139,92,246,0.25)] rounded-xl group"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-violet-600/80 to-blue-600/80 rounded-xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
-                    <a href="/chat" target="_blank" rel="noreferrer" className="relative z-10">
-                      Try Beta →
-                    </a>
-                  </Button> */}
-
-                  {/* <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-blue-500/20 hover:border-blue-500/40 bg-slate-950/50 backdrop-blur-sm text-blue-300 hover:text-blue-200 px-8 py-6 text-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_8px_rgba(59,130,246,0.15)] rounded-xl"
-                  >
-                    Learn More
-                  </Button> */}
-                  <div className="bg-transparent border-1xl mx-auto sm:mx-0" style={{ border: '1px solid #2596be', borderRadius: '0.5rem' }} >
-                    <WalletMultiButton style={{ backgroundColor: '#0c1434', color: '#2596be', border: '1px solid #2596be', borderRadius: '0.5rem' }} />
+                  <div className="bg-transparent border-1xl mx-auto sm:mx-0" style={{ border: '1px solid #ff5c01', borderRadius: '0.5rem' }} >
+                    <WalletMultiButton style={{ backgroundColor: '#282829', color: '#ff5c01', border: '1px solid #ff5c01', borderRadius: '0.5rem' }} />
                   </div>
                 </div>
               </div>
@@ -76,7 +59,7 @@ export default function Home() {
             href="https://x.com/bonx_ai" 
             target="https://x.com/bonx_ai" 
             rel="noopener noreferrer"
-            className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
+            className="p-2 text-[#ff5c01] hover:text-white transition-all duration-300"
           >
             <RiTwitterXFill className="h-5 w-5" />
           </a>
@@ -84,7 +67,7 @@ export default function Home() {
             href="https://pump.fun" 
             target="https://pump.fun" 
             rel="noopener noreferrer"
-            className="p-2 text-[#2596be] hover:text-white transition-all duration-300"
+            className="p-2 text-[#ff5c01] hover:text-white transition-all duration-300"
           >
             <ExternalLink className="h-5 w-5" />
           </a>
@@ -93,3 +76,4 @@ export default function Home() {
     </div>
   )
 }
+
