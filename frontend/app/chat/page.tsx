@@ -855,7 +855,7 @@ return (
       {/* <VideoBackground /> */}
       
       {/* Header */}
-      <header className="relative z-14 border-b border-white/10 bg-[#FFA500]/60 backdrop-blur-xl p-2 md:p-4">
+      <header className="relative z-30 border-b border-white/10 bg-[#FFA500]/60 backdrop-blur-xl p-2 md:p-4">
   <div className="flex items-center justify-between">
     <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap md:flex-nowrap">
 
@@ -876,7 +876,7 @@ return (
   </span>
 
   {/* Address & Copy Button */}
-  <div className="flex items-center gap-1 bg-[#FFA500]/20 border border-[#FFA500]/30 rounded-md px-2 py-1 text-xs text-[#FFA500]">
+  <div className="flex items-center gap-1 bg-[#FFA500]/20 border border-[#FFA500]/30 rounded-md px-2 py-1 text-xs text-[#FFA500] relative z-40">
     <span className="truncate max-w-[360px]">{contractAddress}</span>
     <button
       onClick={handleCopy}
