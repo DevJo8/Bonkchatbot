@@ -865,36 +865,29 @@ return (
       {/* Header */}
       <header className="relative z-30 border-b border-[#282829] bg-[#282829] p-2 md:p-4">
         <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-2 sm:gap-0 w-full">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full sm:w-auto">
-            {/* Logo BONX */}
-            <div className="border border-[#ff5c01]/40 rounded-full p-0.5 mb-1 sm:mb-0">
+          {/* Baris 1: Logo, Judul, Wallet */}
+          <div className="flex flex-row items-center justify-center w-full gap-2 mb-2 sm:mb-0">
+            <div className="border border-[#ff5c01]/40 rounded-full p-0.5">
               <Image
                 src="/bonx-logo.png"
                 alt="Bonx"
-                width={48}
-                height={48}
+                width={40}
+                height={40}
                 className="rounded-full"
               />
             </div>
-            {/* Teks BONX */}
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center">Cobonx AI</span>
+            <span className="text-base sm:text-xl md:text-2xl font-bold text-white text-center whitespace-nowrap">Cobonx AI</span>
+            <div className="flex-1 flex justify-end">
+              <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative', height: '32px', minWidth: '80px' }} />
+            </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
-            {/* Contract Address Button */}
-            <button
-              onClick={handleCopy}
-              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-full sm:w-auto"
-              title="Copy contract address"
-            >
-              <span className="truncate max-w-[140px] sm:max-w-none">{contractAddress}</span>
-              <Copy size={14} />
-              {copied && <span className="text-green-200 ml-2">Copied!</span>}
-            </button>
+          {/* Baris 2: Clear Chat & New Chat */}
+          <div className="flex flex-row gap-2 w-full mb-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleClearChat}
-              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-full sm:w-auto"
+              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-1/2"
             >
               <span className="text-white">Clear Chat</span>
             </motion.button>
@@ -902,15 +895,22 @@ return (
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleNewChat}
-              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-full sm:w-auto"
+              className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-1/2"
             >
               <PlusCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
               <span className="text-white">New Chat</span>
             </motion.button>
-            <div className="w-full sm:w-auto flex justify-center">
-              <WalletMultiButton style={{ background: '#ff5c01', color: '#fff', zIndex: 50, position: 'relative', width: '100%' }} />
-            </div>
           </div>
+          {/* Baris 3: Contract Address */}
+          <button
+            onClick={handleCopy}
+            className="bg-[#ff5c01] hover:bg-[#ff7f2a] text-white font-medium py-1 px-3 rounded-full border border-white/10 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-glow-sm text-xs sm:text-sm md:text-base w-full truncate"
+            title="Copy contract address"
+          >
+            <span className="truncate max-w-[180px] sm:max-w-none">{contractAddress}</span>
+            <Copy size={14} />
+            {copied && <span className="text-green-200 ml-2">Copied!</span>}
+          </button>
         </div>
       </header>
 
