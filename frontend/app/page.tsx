@@ -73,7 +73,13 @@ export default function Home() {
           </a>
         </div>
       </main>
+      {/* Dog Image - fixed on the right side */}
+      <img 
+        src="/dog.png" 
+        alt="Bonx Dog" 
+        className="fixed bottom-20 right-10 w-64 h-auto z-10 select-none pointer-events-none" 
+        style={{maxWidth: '320px'}}
+      />
     </div>
   )
 }
-
