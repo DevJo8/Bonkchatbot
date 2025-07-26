@@ -15,7 +15,7 @@ export default function PromptSuggestions({ onSuggestionClick }: PromptSuggestio
     },
     {
       title: "Get my COBONX balance",
-      description: "Check how many CBONX tokens you have in your wallet",
+      description: "Check how many COBONX tokens you have in your wallet",
       prompt: "Get my COBONX balance"
     },
     {
