@@ -1139,8 +1139,8 @@ return (
             <RiTwitterXFill className="h-5 w-5" />
           </a>
           <a 
-            href="https://letsbonk.fun/token/8Qpu3K5YFWYjTKbzUbpXu4CJneQ9a3f77xc2YP2fbonk" 
-            target="https://letsbonk.fun/token/8Qpu3K5YFWYjTKbzUbpXu4CJneQ9a3f77xc2YP2fbonk" 
+            href="pump.fun" 
+            target="pump.fun" 
             rel="noopener noreferrer"
             className="p-2 text-[#FFA500] hover:text-white transition-all duration-300"
           >
