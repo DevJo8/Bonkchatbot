@@ -183,7 +183,7 @@ new DynamicTool({
         if (!publicKey) return "No wallet connected";
 
         const tokenMintMap: Record<string, string> = {
-          "COBONX": "8Qpu3K5YFWYjTKbzUbpXu4CJneQ9a3f77xc2YP2fbonk", // Ganti dengan mint aslimu nanti
+          "COBONX": "SOON", // Ganti dengan mint aslimu nanti
           "BONK": "DezX4v3eDqNN5UP57wX6dM7kQAxvFBLu1Zxz97uhz5W",
           "WEN": "WEN2S8ysFbN3yocPvZyTuyYtGbJUzMdb3kLpmh7m6hL"
         };
