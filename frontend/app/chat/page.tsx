@@ -107,7 +107,7 @@ export default function ChatPage() {
   const { connection } = useConnection();
   const [balance, setBalance] = useState<number | null>(null); // State to hold the balance
 
-const contractAddress = "COMING SOON";
+const contractAddress = "8Qpu3K5YFWYjTKbzUbpXu4CJneQ9a3f77xc2YP2fbonk";
 const [copied, setCopied] = useState(false);
 const [copiedWallet, setCopiedWallet] = useState(false); // For wallet address copy
 const handleCopy = () => {
@@ -183,7 +183,7 @@ new DynamicTool({
         if (!publicKey) return "No wallet connected";
 
         const tokenMintMap: Record<string, string> = {
-          "COBONX": "SOON", // Ganti dengan mint aslimu nanti
+          "COBONX": "8Qpu3K5YFWYjTKbzUbpXu4CJneQ9a3f77xc2YP2fbonk", // Ganti dengan mint aslimu nanti
           "BONK": "DezX4v3eDqNN5UP57wX6dM7kQAxvFBLu1Zxz97uhz5W",
           "WEN": "WEN2S8ysFbN3yocPvZyTuyYtGbJUzMdb3kLpmh7m6hL"
         };
@@ -1139,8 +1139,8 @@ return (
             <RiTwitterXFill className="h-5 w-5" />
           </a>
           <a 
-            href="https://letsbonk.fun" 
-            target="https://letsbonk.fun" 
+            href="https://letsbonk.fun/token/8Qpu3K5YFWYjTKbzUbpXu4CJneQ9a3f77xc2YP2fbonk" 
+            target="https://letsbonk.fun/token/8Qpu3K5YFWYjTKbzUbpXu4CJneQ9a3f77xc2YP2fbonk" 
             rel="noopener noreferrer"
             className="p-2 text-[#FFA500] hover:text-white transition-all duration-300"
           >
