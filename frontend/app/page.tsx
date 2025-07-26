@@ -18,7 +18,7 @@ import { useState } from "react"
 export default function Home() {
   const { connected } = useWallet()
   const router = useRouter()
-  const contractAddress = "COMING SOON";
+  const contractAddress = "J2t2BYQNqCQdSAAVpmrPE25xMgWnQzZfMsPZdsHqpump";
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText(contractAddress);
@@ -84,8 +84,8 @@ export default function Home() {
             <RiTwitterXFill className="h-5 w-5" />
           </a>
           <a 
-            href="pump.fun" 
-            target="pump.fun" 
+            href="https://pump.fun/coin/J2t2BYQNqCQdSAAVpmrPE25xMgWnQzZfMsPZdsHqpump" 
+            target="https://pump.fun/coin/J2t2BYQNqCQdSAAVpmrPE25xMgWnQzZfMsPZdsHqpump" 
             rel="noopener noreferrer"
             className="p-2 text-[#ff5c01] hover:text-white transition-all duration-300"
           >
